@@ -1,5 +1,7 @@
 import os
 
+LATEST_ID = 1250000
+
 exec_dir = os.path.dirname(os.path.realpath(__file__))
 target_file = exec_dir+'/wrong_ids.coll2'
 
@@ -9,7 +11,7 @@ def main():
     f.writelines('doc:\n')
     f.writelines('- version: 1\n')
     f.writelines('- items:\n')
-    for id in range(1234567, 1250000):
+    for id in range(1234567, LATEST_ID):
         print(id)
         f.writelines(f'  - - id: {id}\n')
         f.writelines('    - r: 1\n')
